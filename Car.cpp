@@ -16,12 +16,19 @@ void Car::RotateLeft() {
     //std::cout << "Current Angle Of Car" << Angle << " \n";
 }
 
-void Car::MoveForward() {
-    PosX += 7* std::cos((Angle*M_PI)/180.0) ;
-    PosY += 7*std::sin((Angle*M_PI)/180.0);
+void Car::ForwardPress() {
+    VelX += 1*cos((Angle*M_PI)/180.0);
+    VelY += 1*sin((Angle*M_PI)/180.0);
 }
 
-void Car::MoveBack() {
-    PosX += -7* std::cos((Angle*M_PI)/180.0) ;
-    PosY += -7*std::sin((Angle*M_PI)/180.0);
+void Car::BackwardPress() {
+    VelX -= 1*cos((Angle*M_PI)/180.0);
+    VelY -= 1*sin((Angle*M_PI)/180.0);
+}
+
+void Car::Move() {
+    PosX += VelX ;
+    PosY += VelY;
+    VelX *= 0.95;
+    VelY *= 0.95;
 }

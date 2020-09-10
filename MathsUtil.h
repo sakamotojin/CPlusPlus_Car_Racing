@@ -6,8 +6,5 @@
 #define MYFIRSTSFMLGAME_MATHSUTIL_H
 
 
-void function(){
-
-}
 
 #endif //MYFIRSTSFMLGAME_MATHSUTIL_H

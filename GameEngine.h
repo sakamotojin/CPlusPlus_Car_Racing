@@ -8,6 +8,7 @@
 #include <string>
 #include <SFML/Graphics.hpp>
 #include "Car.h"
+#include <math.h>
 
 const std::string B_PATH = "Assets/bg.png";
 const std::string C_PATH = "Assets/car.png";

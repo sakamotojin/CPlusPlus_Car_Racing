@@ -8,7 +8,7 @@
 
 class Car {
     float PosX , PosY ;
-    float VelX , VecY ;
+    float VelX , VelY ;
     float Angle ;
     float AcX , AcY ;
     sf::Color CarColor;
@@ -18,7 +18,7 @@ public :
         PosX = X , PosY = Y ;
         CarColor = CaCol ;
         Angle = 0 ;
-        VelX = 0 , VecY = 0 ;
+        VelX = 0 , VelY = 0 ;
         AcX = 0 , AcY = 0 ;
     }
 
@@ -30,13 +30,15 @@ public :
 
     float  GetAngle(){ return Angle;}
 
-    void MoveForward();
+    void ForwardPress();
 
     void RotateLeft();
 
     void RotateRight();
 
-    void MoveBack();
+    void BackwardPress();
+
+    void Move();
 
 };
 
